@@ -11,15 +11,15 @@ function BottomTabs({ navigation }) {
   return (
     <View style={styles.mainContainer}>
       <Button
-        buttonName={"Bottom Tab 1"}
+        buttonName={"Basic Bottom Tab"}
         onPress={onButtonPress.bind(this, "BottomTab1")}
       />
       <Button
-        buttonName={"Bottom Tab 2"}
+        buttonName={"Custom Bottom Tab 1"}
         onPress={onButtonPress.bind(this, "BottomTab2")}
       />
       <Button
-        buttonName={"Bottom Tab 3"}
+        buttonName={"Custom Bottom Tab 2"}
         onPress={onButtonPress.bind(this, "BottomTab3")}
       />
     </View>
