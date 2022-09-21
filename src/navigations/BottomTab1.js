@@ -15,7 +15,6 @@ function BottomTab1() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        headerTitle: "Bottom Tab 1",
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 

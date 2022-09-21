@@ -14,6 +14,10 @@ function BottomTabs({ navigation }) {
         buttonName={"Bottom Tab 1"}
         onPress={onButtonPress.bind(this, "BottomTab1")}
       />
+      <Button
+        buttonName={"Bottom Tab 2"}
+        onPress={onButtonPress.bind(this, "BottomTab2")}
+      />
     </View>
   );
 }
