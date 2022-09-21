@@ -6,6 +6,7 @@ import Home from "../screens/Home";
 import BottomTabs from "../screens/BottomTabs/BottomTabs";
 import BottomTab1 from "../navigations/BottomTab1";
 import BottomTab2 from "../navigations/BottomTab2";
+import BottomTab3 from "../navigations/BottomTab3";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,12 @@ function Initial() {
       <Stack.Screen
         name="BottomTab2"
         component={BottomTab2}
-        options={{ headerBackTitleVisible: false, title: "Custom Bottom Ta" }}
+        options={{ headerBackTitleVisible: false, title: "Custom Bottom Tab" }}
+      />
+      <Stack.Screen
+        name="BottomTab3"
+        component={BottomTab3}
+        options={{ headerBackTitleVisible: false, title: "Custom Bottom Tab" }}
       />
     </Stack.Navigator>
   );

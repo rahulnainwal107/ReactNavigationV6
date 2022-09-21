@@ -3,9 +3,9 @@ import { View, Text, TouchableOpacity } from "react-native";
 
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-function CustomBottomTab2({ state, descriptors, navigation }) {
+function CustomBottomTab3({ state, descriptors, navigation }) {
   return (
-    <View style={{ flexDirection: "row" }}>
+    <View style={{ flexDirection: "row", backgroundColor: "white" }}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -50,6 +50,46 @@ function CustomBottomTab2({ state, descriptors, navigation }) {
             target: route.key,
           });
         };
+        if (route.name === "Settings") {
+          return (
+            <TouchableOpacity
+              accessibilityRole="button"
+              accessibilityState={isFocused ? { selected: true } : {}}
+              accessibilityLabel={options.tabBarAccessibilityLabel}
+              testID={options.tabBarTestID}
+              onPress={onPress}
+              onLongPress={onLongPress}
+              style={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+                // elevation: 5,
+                // shadowOffset: { height: 0, width: 0 },
+                // shadowOpacity: 0.2,
+                // shadowColor: "grey",
+                // shadowRadius: 1,
+              }}
+              key={index}
+            >
+              <View
+                style={{
+                  height: 50,
+                  width: 50,
+                  borderRadius: 25,
+                  marginTop: -45,
+                  backgroundColor: "orange",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderWidth: 5,
+                  borderColor: "white",
+                }}
+              >
+                <Ionicons name={iconName} size={25} color={color} />
+              </View>
+              {/* <Text style={{ color: color }}>{label}</Text> */}
+            </TouchableOpacity>
+          );
+        }
 
         return (
           <TouchableOpacity
@@ -73,4 +113,4 @@ function CustomBottomTab2({ state, descriptors, navigation }) {
   );
 }
 
-export default CustomBottomTab2;
+export default CustomBottomTab3;

@@ -4,17 +4,17 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Screen1 from "../screens/BottomTabs/components/Screen1";
 import Screen2 from "../screens/BottomTabs/components/Screen2";
 import Screen3 from "../screens/BottomTabs/components/Screen3";
-import CustomBottomTab2 from "../components/CustomBottomTab2";
+import CustomBottomTab3 from "../components/CustomBottomTab3";
 
 const Tab = createBottomTabNavigator();
 
-function BottomTab2() {
+function BottomTab3() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
       })}
-      tabBar={(props) => <CustomBottomTab2 {...props} />}
+      tabBar={(props) => <CustomBottomTab3 {...props} />}
     >
       <Tab.Screen name="Home" component={Screen1} />
       <Tab.Screen name="Settings" component={Screen2} />
@@ -23,4 +23,4 @@ function BottomTab2() {
   );
 }
 
-export default BottomTab2;
+export default BottomTab3;
