@@ -14,6 +14,10 @@ function Buttons({ navigation }) {
         buttonName={"Bottom Tabs"}
         onPress={onButtonPress.bind(this, "BottomTabs")}
       />
+      <Button
+        buttonName={"Navigation Transitions"}
+        onPress={onButtonPress.bind(this, "NavigationTransitionStack")}
+      />
     </View>
   );
 }

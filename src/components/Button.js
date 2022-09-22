@@ -1,10 +1,11 @@
 import * as React from "react";
 import { Text, StyleSheet, TouchableOpacity } from "react-native";
 
-function Button({ buttonName, onPress }) {
+function Button({ buttonName, subText = "", onPress }) {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.buttonText}>{buttonName}</Text>
+      {subText && <Text style={styles.subText}>( {subText} )</Text>}
     </TouchableOpacity>
   );
 }
@@ -12,20 +13,24 @@ function Button({ buttonName, onPress }) {
 export default Button;
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-  },
   button: {
-    height: 50,
+    minHeight: 50,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "green",
     margin: 10,
     borderRadius: 5,
+    padding: 5,
   },
   buttonText: {
     fontSize: 18,
     color: "white",
     fontWeight: "bold",
+  },
+  subText: {
+    fontSize: 14,
+    color: "white",
+    fontWeight: "500",
+    textAlign: "center",
   },
 });
