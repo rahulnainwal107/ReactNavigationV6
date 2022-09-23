@@ -18,6 +18,10 @@ function Buttons({ navigation }) {
         buttonName={"Navigation Transitions"}
         onPress={onButtonPress.bind(this, "NavigationTransitionStack")}
       />
+      <Button
+        buttonName={"Drawer Navigations"}
+        onPress={onButtonPress.bind(this, "DrawerStack")}
+      />
     </View>
   );
 }

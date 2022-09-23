@@ -13,6 +13,9 @@ import BottomTab3 from "../navigations/BottomTab3";
 // Navigation Transitions
 import NavigationTransitionStack from "../navigations/NavigationTransitionStack";
 
+// Drawer
+import DrawerStack from "./DrawerStack";
+
 const Stack = createNativeStackNavigator();
 
 function Initial() {
@@ -46,6 +49,13 @@ function Initial() {
           headerShown: false,
           headerBackTitleVisible: false,
           title: "Custom Navigation Transitions",
+        }}
+      />
+      <Stack.Screen
+        name="DrawerStack"
+        component={DrawerStack}
+        options={{
+          headerShown: false,
         }}
       />
     </Stack.Navigator>
