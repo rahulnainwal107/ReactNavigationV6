@@ -22,6 +22,10 @@ function Buttons({ navigation }) {
         buttonName={"Drawer Navigations"}
         onPress={onButtonPress.bind(this, "DrawerStack")}
       />
+      <Button
+        buttonName={"Shared Element Transitions"}
+        onPress={onButtonPress.bind(this, "SharedElementTransitionStack")}
+      />
     </View>
   );
 }

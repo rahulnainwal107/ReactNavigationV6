@@ -16,6 +16,9 @@ import NavigationTransitionStack from "../navigations/NavigationTransitionStack"
 // Drawer
 import DrawerStack from "./DrawerStack";
 
+// Shared element
+import SharedElementTransitionStack from "./SharedElementTransitionStack";
+
 const Stack = createNativeStackNavigator();
 
 function Initial() {
@@ -54,6 +57,13 @@ function Initial() {
       <Stack.Screen
         name="DrawerStack"
         component={DrawerStack}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="SharedElementTransitionStack"
+        component={SharedElementTransitionStack}
         options={{
           headerShown: false,
         }}
