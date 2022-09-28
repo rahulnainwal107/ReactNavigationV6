@@ -19,6 +19,9 @@ import DrawerStack from "./DrawerStack";
 // Shared element
 import SharedElementTransitionStack from "./SharedElementTransitionStack";
 
+// Set Params
+import SetParams from "../screens/SetParams/SetParams";
+
 const Stack = createNativeStackNavigator();
 
 function Initial() {
@@ -66,6 +69,13 @@ function Initial() {
         component={SharedElementTransitionStack}
         options={{
           headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="SetParams"
+        component={SetParams}
+        options={{
+          headerShown: true,
         }}
       />
     </Stack.Navigator>

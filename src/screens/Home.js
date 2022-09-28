@@ -4,8 +4,10 @@ import { View, StyleSheet } from "react-native";
 import Button from "../components/Button";
 
 function Buttons({ navigation }) {
-  const onButtonPress = (routeName) => {
-    navigation.navigate(routeName);
+  const onButtonPress = (routeName, userName, fromScreen) => {
+    userName && fromScreen
+      ? navigation.navigate(routeName, { userName, fromScreen })
+      : navigation.navigate(routeName);
   };
 
   return (
@@ -25,6 +27,11 @@ function Buttons({ navigation }) {
       <Button
         buttonName={"Shared Element Transitions"}
         onPress={onButtonPress.bind(this, "SharedElementTransitionStack")}
+      />
+      <Button
+        buttonName={"Set Params"}
+        subText="To illustrate how setParams method works"
+        onPress={onButtonPress.bind(this, "SetParams", "Rahul Nainwal", "Home")}
       />
     </View>
   );
