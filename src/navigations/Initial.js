@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import { TransitionPresets } from "@react-navigation/stack";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "../screens/Home";
@@ -69,6 +70,7 @@ function Initial() {
         component={SharedElementTransitionStack}
         options={{
           headerShown: false,
+          ...TransitionPresets.ModalSlideFromBottomIOS,
         }}
       />
       <Stack.Screen
@@ -76,6 +78,7 @@ function Initial() {
         component={SetParams}
         options={{
           headerShown: true,
+          presentation: "containedTransparentModal",
         }}
       />
     </Stack.Navigator>

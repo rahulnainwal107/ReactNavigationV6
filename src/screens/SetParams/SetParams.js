@@ -1,5 +1,8 @@
 /**
  * // https://reactnavigation.org/docs/navigation-prop/#setparams
+ *
+ * Note: Avoid using setParams to update screen options such as title etc. If you need to update options, use setOptions instead.
+ *
  */
 
 import React from "react";
